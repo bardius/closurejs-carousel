@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if lte IE 9]>    <html class="no-js lt-ie10" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" lang="en"><!--<![endif]-->
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+        <title>Google - Google Tour</title>
+        <meta content="Google Tour" name="description">
+        <meta content="Google Tour" name="keywords">
+        <link href="css/styles.css" rel="stylesheet" type="text/css">
+        <script src="js/modernizer.js"></script>
+        <script src="closure-lib/closure/goog/base.js"></script>
+        <script>
+            goog.require('goog.dom');
+            goog.require('goog.dom.query');
+            goog.require('goog.events');
+            goog.require('goog.events.EventType');
+            goog.require('goog.ui.Component.EventType');
+            goog.require('goog.object');
+            goog.require('goog.array');
+            goog.require('goog.style');
+            goog.require('goog.fx.dom');
+            goog.require('goog.fx.Animation');
+       </script>
+        <script src="js/carousel.js"></script>
+    </head>
+    <body>
+        <header>
+            <div id="maia-header">
+                <div class="maia-aux">
+                  <h1>
+                      <a href="http://www.google.com">
+                          <img alt="Google" src="images/google-logo.png" id="logo" />
+                          <span class="inv">Google Tour</span>
+                      </a>
+                  </h1>
+                  <div class="google-plus-one" data-size="small">
+                    <div class="g-plusone" data-size="small"></div>
+                  </div>
+                </div>
+            </div>
+        </header>
+        <div id="maia-main">
+            <!--[if lte IE 9]>
+            <div class="compatibility-message">
+              <p class="intro">This page features an interactive experience that is not compatible with your browser. We recommend using the latest version of <a href="http://www.microsoft.com/IE9" target="_blank">Internet Explorer</a>, upgrading to <a href="//www.google.com/chrome/" target="_blank">Google Chrome</a>, or continuing to to explore other pages on this site.</p>
+            </div>
+            <![endif]-->
+            <div class="intro" id="topBanner">
+                <section>
+                    <div class="topBannerText">
+                        <header>
+                            <h2>Tour Google for a world of difference in how you search</h2>
+                        </header>
+                        <article>
+                            <header>
+                                <h3>Explore ways to take your search further</h3>
+                            </header>
+                            <p>Work is hard and you need a break. <br>A sun-soaked vacation is just the ticket, but where to begin?</p> 
+                            <p>With Google there's a world of helpful, time-saving features right at your fingertips. 
+                                To see how these free services can help you find what you're looking for faster, 
+                                tag along as we plan a tropical vacation, or go straight to <a href="http://www.google.co.uk/intl/en/about/products/" title="Google Services and Tools">Google Services and Tools</a>.
+                            </p>
+                            <a href="#carouselContainer" title="Take the tour" id="tourBtn" class="buttonLink">Take the tour</a>
+                        </article>
+                    </div>
+                    <div class="topBannerImage">
+                        <figure>
+                            <img src="images/earth.png" alt="Earth" />
+                        </figure>
+                        <div class="earthBg">
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div id="carouselContainer" class="tourCarouselHolder">
+                <section>
+                    <div class="footprintsPath">
+                        <div class="footprints path1"></div>
+                        <div class="footprints path2"></div>
+                        <div class="footprints path3"></div>
+                        <div class="footprints path4"></div>
+                        <div class="footprints path5"></div>
+                        <div class="footprints path6"></div>
+                        <div class="footprints path7"></div>
+                        <div class="footprints path8"></div>
+                        <div class="footprints path9"></div>
+                        <div class="footprints path10"></div>
+                        <div class="footprints path11"></div>
+                        <div class="footprints path12"></div>
+                        <div class="footprints path13"></div>
+                        <div class="footprints path14"></div>
+                        <div class="footprints path15"></div>
+                        <div class="footprints path16"></div>
+                        <div class="footprints path17"></div>
+                    </div>
+                    <div id="tourCarouselNav" class="goog-tab-bar goog-tab-bar-top">
+                        <div id="slide0" class="goog-tab" title="Google News">Google News</div>
+                        <div id="slide1" class="goog-tab" title="Google Toolbar">Google Toolbar</div>
+                        <div id="slide2" class="goog-tab" title="Google Groups">Google Groups</div>
+                        <div id="slide3" class="goog-tab" title="Google Images">Google Images</div>
+                        <div id="slide4" class="goog-tab" title="Product Search">Product Search</div>
+                        <div id="slide5" class="goog-tab" title="Feeling Lucky">Feeling Lucky</div>
+                        <div id="slide6" class="goog-tab" title="Google Search Features">Google Search Features</div>
+                    </div>
+                    <div class="goog-tab-bar-clear"></div>
+                    <div id="tourCarousel_content" class="goog-tab-content">
+                        <div id="slide0Holder" class="slide red">
+                            <article>
+                                <div class="carouselSlideText">
+                                    <header>
+                                        <h3>Get the latest from Google News</h3>
+                                    </header>
+                                    <p>The destination determined, you decide to visit Google News to brush up on the 
+                                        very latest, so you'll be able to converse with the natives intelligently about the 
+                                        events of the day.</p>
+                                    <p>Search and browse 4,000 leading news sources from around the world, with 
+                                        headlines and photos continuously updated automatically throughout the day.</p>
+                                    <p>Click on a headline to be taken directly to the original source of the story you want to read.</p>
+                                    <a class="buttonLink" href="#" id="slideButton0" title="Check out Google News">Check out Google News</a>
+                                </div>
+                                <div class="carouselSlideImage">
+                                    <figure>
+                                        <img src="images/google-news.jpg" alt="Google News Promo" />
+                                    </figure>
+                                </div>
+                            </article>
+                        </div>
+                        <div id="slide1Holder" class="slide yellow">
+                            <article>
+                                <div class="carouselSlideText">
+                                    <header>
+                                        <h3>Take the Google Toolbar with you</h3>
+                                    </header>
+                                    <p>Realizing you'll hit a lot of websites before you hit the beach, 
+                                        the first thing you pack is the Google Toolbar. 
+                                        
+                                    <p>Add it to your Internet Explorer and you can take Google with you anywhere 
+                                        on the web.</p>
+                                    <p>It takes only seconds to install and enables you to easily use 
+                                        Google without having to return to the homepage.</p>
+                                    <a class="buttonLink" href="#" id="slideButton1" title="Download the Google Toolbar">Download the Google Toolbar</a>
+                                </div>
+                                <div class="carouselSlideImage">
+                                    <figure>
+                                        <img src="images/google-toolbar.jpg" alt="Google Toolbar Promo" />
+                                    </figure>
+                                </div>
+                            </article>
+                        </div>
+                        <div id="slide2Holder" class="slide blue">
+                            <article>
+                                <div class="carouselSlideText">
+                                    <header>
+                                        <h3>Visit Google Groups for great advice</h3>
+                                    </header>
+                                    <p>It's always helpfull to have a guide when planning a trip, so you check in with 
+                                        a couple million experts. Google Groups is a searchable database of more than 
+                                        800 million Usenet posts on every imaginable topic, including unspoiled islands 
+                                        and low-cost airfare.</p>
+                                    <p>Ask questions and read comments in Usenet discussion forums. Explore topics in detail 
+                                        by perusing posts that contain amateur advice, professional recommendations and everything inn between.</p>
+                                    <a class="buttonLink" href="#" id="slideButton2" title="Visit google Groups">Visit google Groups</a>
+                                </div>
+                                <div class="carouselSlideImage">
+                                    <figure>
+                                        <img src="images/google-groups.jpg" alt="Google Groups Promo" />
+                                    </figure>
+                                </div>
+                            </article>
+                        </div>
+                        <div id="slide3Holder" class="slide green">
+                            <article>
+                                <div class="carouselSlideText">
+                                    <header>
+                                        <h3>Check out the views at Google Images</h3>
+                                    </header>
+                                    <p>Refusing to allow a small setback like bad weather to dampen your spirits, 
+                                        you take a visual tour of other potential warm weather hot spots using 
+                                        Google Images where you can search more than 400 million photos, 
+                                        artworks and other graphics.</p>
+                                    <p>You enter the query "tropical vacations" and click a thumbnail to see a 
+                                        largest image and the web page on which it's located.</p>
+                                    <a class="buttonLink" href="#" id="slideButton3" title="Search Google Images">Search Google Images</a>
+                                </div>
+                                <div class="carouselSlideImage">
+                                    <figure>
+                                        <img src="images/google-images.jpg" alt="Google Images Promo" />
+                                    </figure>
+                                </div>
+                            </article>
+                        </div>
+                        <div id="slide4Holder" class="slide yellow">
+                            <article>
+                                <div class="carouselSlideText">
+                                    <header>
+                                        <h3>Find great products with Product Search</h3>
+                                    </header>
+                                    <p>Having decided to soak you stress away in a home hot tub, you use 
+                                        Product Search, the new product search service from Google, to find the 
+                                        best deal on exactly the model you want to buy. Product Search's objective 
+                                        results take you directly to the store selling the tub you are hot for.</p> 
+                                    <p>Use Product Search to locate the best deal on the exact products you want. 
+                                        Searching through millions of relevant web sites, Google pinpoints sites 
+                                        offering any specific product you select, enabling you to save money and time.</p>
+                                    <a class="buttonLink" href="#" id="slideButton4" title="Locate the best Product Deals">Locate the best Product Deals</a>
+                                </div>
+                                <div class="carouselSlideImage">
+                                    <figure>
+                                        <img src="images/product-search.jpg" alt="Google Product Search Promo" />
+                                    </figure>
+                                </div>
+                            </article>
+                        </div>
+                        <div id="slide5Holder" class="slide red">
+                            <article>
+                                <div class="carouselSlideText">
+                                    <header>
+                                        <h3>For a quicker trip, try "I'm Feeling Lucky"</h3>
+                                    </header>
+                                    <p>You've found the perfect solution to melt your stress. All you need now are 
+                                        some tunes to set the mood.</p>
+                                    <p>You type your favorite radio station's call letters into the Google search box 
+                                        and hit the button that says "I'm Feeling Lucky," which takes you directly to 
+                                        the first web page Google returned from your query.</p>
+                                    <p>When you know the exact name of the company, subject or person you're 
+                                        looking for, it's a pretty safe bet Google will deliver the site you want as the first 
+                                        result. Try it for yourself and see how lucky you really are...</p>
+                                </div>
+                                <div class="carouselSlideImage">
+                                    <figure>
+                                        <img src="images/feeling-lucky.jpg" alt="Google News Promo" />
+                                    </figure>
+                                </div>
+                            </article>
+                        </div>
+                        <div id="slide6Holder" class="slide blue">
+                            <article>
+                                <div class="carouselSlideText">
+                                    <header>
+                                        <h3>Get equipped to search even further</h3>
+                                    </header>
+                                    <p>As you soak away in your bubbly corner of paradise, you consider how far 
+                                        Google was able to take you and contemplate other ways Google can improve 
+                                        your existence.</p>
+                                    <p>You determine to learn more about Google by reviewing the 
+                                        Gooogle Search Features page. </p>
+                                    <p>Starting … tomorrow.</p>
+                                    <a class="buttonLink" href="#" id="slideButton6" title="View All Google Search Features">View All Google Search Features</a>
+                                </div>
+                                <div class="carouselSlideImage">
+                                    <figure>
+                                        <img src="images/google-features.jpg" alt="Google Search Features Promo" />
+                                    </figure>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <aside>
+                        <div class="extraPromo">
+                            <h4>More time-saving options</h4>
+                            <p>You've seen a few of the ways to use Google that take you beyond the homepage. Their are many more time-saving options Google has to offer, including: </p>
+                            <ul>
+                                <li><a href="http://answers.google.com/answers/" title="Google Answers"><img src="images/google-answers.png" alt="Google Answers" /><span>Google Answers</span></a></li>
+                          		<li><a href="http://translate.google.com/" title="Google Translate"><img src="images/google-translate.png" alt="Google Translate" /><span>Google Translate</span></a></li>
+                          		<li><a href="http://www.google.com/advanced_search" title="Advanced Search"><img src="images/advanced-search.png" alt="Advanced Search" /><span>Advanced Search</span></a></li>
+                          		<li><a href="http://books.google.com/" title="Google Book Search"><img src="images/google-books.png" alt="Google Book Search" /><span>Google Book Search</span></a></li>
+                          	</ul>
+                            <p>Visit the <a href="http://www.google.com/intl/en/about/products/" title="More Google products">More Google products</a> page to see the complete list.</p>
+                        </div>
+                    </aside>
+                </section>
+            </div>
+        </div>
+        <div id="maia-signature"></div>
+        <footer>
+            <div class="maia-footer" id="maia-footer">
+                <div id="maia-footer-local">
+                  <div class="maia-aux">
+                    <ul class="corp-footer-local maia-aux">
+                      <li>
+                        <a href="https://www.google.co.uk/intl/en/about/company/" title="Company">Company</a>
+                        <ul>
+                            <li><a href="https://www.google.co.uk/about/company/facts/" title="Who we are">Who we are</a></li>
+                            <li><a href="https://www.google.co.uk/about/company/philosophy/" title="What we believe">What we believe</a></li>
+                            <li><a href="https://www.google.co.uk/about/company/products/" title="What we do">What we do</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="https://www.google.co.uk/press/" title="News">News</a>
+                        <ul>
+                            <li><a href="https://www.google.co.uk/press/images.html" title="Images and B-roll">Images and B-roll</a></li>
+                            <li><a href="https://www.google.co.uk/press/blog-directory.html" title="Blog directory">Blog directory</a></li>
+                            <li><a href="https://www.google.co.uk/press/google-directory.html" title="Google+ directory">Google+ directory</a></li>
+                            <li><a href="https://www.google.co.uk/press/twitter-directory.html" title="Twitter directory">Twitter directory</a></li>
+                            <li><a href="https://www.google.co.uk/press/facebook-directory.html" title="Facebook directory">Facebook directory</a></li>
+                            <li><a href="https://www.google.co.uk/press/youtube-directory.html" title="YouTube directory">YouTube directory</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="https://www.google.co.uk/about/jobs/" title="Jobs">Jobs</a>
+                        <ul>
+                            <li><a href="https://www.google.co.uk/about/jobs/lifeatgoogle/" title="Life at Google">Life at Google</a></li>
+                            <li><a href="https://www.google.co.uk/about/jobs/locations/" title="Office locations">Office locations</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="http://investor.google.com/" title="Investor relations">Investor relations</a>
+                        <ul>
+                            <li><a href="http://investor.google.com/releases.html" title="News and events">News and events</a></li>
+                            <li><a href="http://investor.google.com/earnings.html" title="Financial information">Financial information</a></li>
+                            <li><a href="http://investor.google.com/corporate/message.html" title="Corporate governance">Corporate governance</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="http://www.google.co.uk/contact/" title="Contact us">Contact us</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div id="maia-footer-global">
+                  <div class="maia-aux">
+                    <ul>
+                      <li><a href="http://www.google.com/" title="Google">Google</a></li>
+                      <li><a href="https://www.google.co.uk/intl/en/about/" title="About Google">About Google</a></li>
+                      <li><a href="http://www.google.com/intl/en-GB/policies/" title="Privacy &amp; Terms">Privacy &amp; Terms</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+        </footer>
+        
+        <script>
+            goog.style.setHeight(goog.dom.getElement('carouselContainer'), 0);
+            
+            var tourBtn = goog.dom.getElement('tourBtn');
+            goog.events.listen(tourBtn, goog.events.EventType.CLICK, initCarousel);
+            
+            function initCarousel() {
+                
+                // Toggle show the carousel container
+                var tourCarouselToggler = goog.dom.getElement('carouselContainer');
+                var toggleAnimation = new goog.fx.dom.ResizeHeight(tourCarouselToggler, 0 , 811, 500);
+				goog.events.listen(toggleAnimation, goog.fx.Transition.EventType.END, function(e){  
+        			goog.dom.classes.toggle(carouselContainer, 'expandedCarouselContainer');
+				});
+                
+                // Start the css3 footprint animation by adding the specified class name
+                footprints = goog.dom.getElementsByClass('footprints');
+                goog.array.forEach(footprints, function(footprint){
+                    goog.dom.classes.toggle(footprint, 'fadeNavIn');
+                });
+                
+                /**
+                * Create a new istance of the Bardis Carousel UI Element
+                * @args carousel:String - ID of the carousel container
+                * speed:int - how long in ms it should take to change slide
+                * autoplay:bool - if true, it will slide by itself until "stop" method called
+                * duration:int - how long it should wait before next slide when is autoplay
+                * delay:int - how long it should wait before first slide is shown
+                * slideHeight:int - the height in pixels of each slide
+                * All arguments are optional except carousel
+                */
+                var slideCarousel = new bardis.ui.Carousel('tourCarousel_content', 700, true, 5000, 1300, 360);
+                
+                goog.events.removeAll(tourBtn);
+                toggleAnimation.play();
+            }
+        </script>
+    
+        <script type="text/javascript">
+            (function() {
+                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                po.src = 'https://apis.google.com/js/plusone.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+            })();
+        </script>
+
+    </body>
+</html>
